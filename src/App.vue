@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { computed } from "vue";
-import enUS from "@arco-design/web-vue/es/locale/lang/en-us";
-import zhCN from "@arco-design/web-vue/es/locale/lang/zh-cn";
-import useLocale from "@/hooks/locale";
-import Greet from "./components/Greet.vue";
-const { currentLocale } = useLocale();
-const locale = computed(() => {
-  switch (currentLocale.value) {
-    case "zh-CN":
-      return zhCN;
-    case "en-US":
-      return enUS;
-    default:
-      return enUS;
-  }
-});
+  import { computed } from 'vue';
+  import enUS from '@arco-design/web-vue/es/locale/lang/en-us';
+  import zhCN from '@arco-design/web-vue/es/locale/lang/zh-cn';
+  import useLocale from '@/hooks/locale';
+  import Greet from './components/Greet.vue';
+  const { currentLocale } = useLocale();
+  const locale = computed(() => {
+    switch (currentLocale.value) {
+      case 'zh-CN':
+        return zhCN;
+      case 'en-US':
+        return enUS;
+      default:
+        return enUS;
+    }
+  });
 </script>
 
 <template>
@@ -40,11 +40,17 @@ const locale = computed(() => {
         Recommended IDE setup:
         <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
         +
-        <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+        <a href="https://github.com/johnsoncodehk/volar" target="_blank"
+          >Volar</a
+        >
         +
-        <a href="https://github.com/tauri-apps/tauri-vscode" target="_blank">Tauri</a>
+        <a href="https://github.com/tauri-apps/tauri-vscode" target="_blank"
+          >Tauri</a
+        >
         +
-        <a href="https://github.com/rust-lang/rust-analyzer" target="_blank">rust-analyzer</a>
+        <a href="https://github.com/rust-lang/rust-analyzer" target="_blank"
+          >rust-analyzer</a
+        >
       </p>
 
       <Greet />
@@ -53,11 +59,11 @@ const locale = computed(() => {
 </template>
 
 <style scoped>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
-}
+  .logo.vite:hover {
+    filter: drop-shadow(0 0 2em #747bff);
+  }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #249b73);
-}
+  .logo.vue:hover {
+    filter: drop-shadow(0 0 2em #249b73);
+  }
 </style>

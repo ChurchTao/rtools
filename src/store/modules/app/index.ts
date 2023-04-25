@@ -1,10 +1,10 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 // import { Notification } from "@arco-design/web-vue";
 // import type { NotificationReturn } from "@arco-design/web-vue/es/notification/interface";
-import defaultSettings from "@/config/settings.json";
-import { AppState } from "./types";
+import defaultSettings from '@/config/settings.json';
+import { AppState } from './types';
 
-const useAppStore = defineStore("app", {
+const useAppStore = defineStore('app', {
   state: (): AppState => ({ ...defaultSettings }),
 
   getters: {
@@ -23,11 +23,11 @@ const useAppStore = defineStore("app", {
     // Change theme color
     toggleTheme(dark: boolean) {
       if (dark) {
-        this.theme = "dark";
-        document.body.setAttribute("theme", "dark");
+        this.theme = 'dark';
+        document.body.setAttribute('theme', 'dark');
       } else {
-        this.theme = "light";
-        document.body.removeAttribute("theme");
+        this.theme = 'light';
+        document.body.removeAttribute('theme');
       }
     },
   },
